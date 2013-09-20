@@ -1,0 +1,15 @@
+{
+    "manifest_version": 2,
+
+    "name": "Hemmelig",
+    "description": "Lets encrypt facebook",
+    "version": "1.0",
+
+    "permissions": [
+        "https://hemmelig.com/"
+    ],
+    "browser_action": {
+        "default_icon": "img/icon.png",
+        "default_popup": "source/test.html"
+    }
+}
