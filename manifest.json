@@ -38,7 +38,7 @@
                 "http://*/*",
                 "https://*/*"
             ],
-            "js": ["lib/sjcl/sjcl.js", "source/js/content.js"],
+            "js": ["lib/jquery.min.js", "lib/sjcl/sjcl.js", "source/js/content.js"],
             "run_at": "document_idle"
         }
     ]
