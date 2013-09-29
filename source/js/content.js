@@ -69,4 +69,6 @@ function UpdateDOM(){
 }
 
 ReplaceContentInContainer(".userContent", "HELLO WORLD");
-data = sjcl.encrypt("rapand", "jeg er en farlig karl");
+data = sjcl.encrypt("rapand", "Den tekst er virkelig hemmelig");
+
+console.log("Data:", data);
