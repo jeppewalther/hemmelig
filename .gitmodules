@@ -1,9 +1,6 @@
-[submodule "sjcl"]
-	path = sjcl
-	url = https://github.com/bitwiseshiftleft/sjcl
-[submodule "lib/rack"]
-	path = lib/rack
-	url = https://github.com/bitwiseshiftleft/sjcl
 [submodule "lib/sjcl"]
 	path = lib/sjcl
 	url = https://github.com/bitwiseshiftleft/sjcl
+[submodule "lib/bootstrap"]
+	path = lib/bootstrap
+	url = https://github.com/twbs/bootstrap.git
