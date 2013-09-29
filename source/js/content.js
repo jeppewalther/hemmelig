@@ -17,8 +17,12 @@ function ReplaceContentInContainer(selector, content) {
     }
 }
 
-
-
+var send_keypress = function(elem){
+    var press = jQuery.Event("keypress");
+    press.ctrlKey = false;
+    press.which = 40;
+    elem.trigger(press);
+}
 
 var encrypt_textfield = function(txtfield){
     var text = txtfield[0].value;
@@ -40,11 +44,14 @@ var add_encryption_button = function(txtfield){
     enc_button.css('left', txt_width - 10);
     enc_button.click(function(event){
         console.log('encryption button clicked', txtfield);
-        if (txtfield.text()[0] == '{'){
+        var text = txtfield[0].value;
+        if (!text || !text.length) return;
+        if (text[0] == '{'){
             decrypt_textfield(txtfield);
         } else {
             encrypt_textfield(txtfield);
         }
+        txtfield.sendkeys(' {backspace}');
     });
     txtfield.parent().append(enc_button);
 }
