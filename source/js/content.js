@@ -35,7 +35,7 @@ var decrypt_textfield = function(txtfield){
 }
 
 var add_encryption_button = function(txtfield){
-    var enc_button = $("<a href='#' style='z-depth:1000; position: absolute; left: 0'>E</a>");
+    var enc_button = $("<a href='#' style='z-depth:1000; position: absolute; left: 0'>H</a>");
     var txt_width = txtfield.width();
     enc_button.css('left', txt_width - 10);
     enc_button.click(function(event){
@@ -45,8 +45,11 @@ var add_encryption_button = function(txtfield){
         } else {
             encrypt_textfield(txtfield);
         }
+        console.log("Pressed:")
+
     });
     txtfield.parent().append(enc_button);
+    txtfield.keydown();
 }
 
 $(document).bind('focusin', function(event){
